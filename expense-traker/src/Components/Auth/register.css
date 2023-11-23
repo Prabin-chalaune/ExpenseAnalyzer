@@ -1,0 +1,96 @@
+.RegisterCard{
+    height:auto;
+    width:40vw;
+    padding: 2rem;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 30%;
+
+}
+
+.inputs{
+    height:2.5rem;
+    width:20vw;
+    padding:1rem 1.5rem;
+    margin:0.3rem;
+    font-size: 1rem;
+
+}
+.loginBtn{
+    height:2.5rem;
+    width:20.5vw;
+    background-color:rgb(230, 102, 47);
+    color:black;
+    transition:ease-in-out;
+    margin:0.4rem;
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border:none;
+    cursor: pointer;
+
+
+}
+.ResisterBtn{
+    height:2.5rem;
+    width:20.5vw;
+    background-color: rgb(105, 237, 28);
+    color:black;
+    transition:ease-in-out;
+    margin:0.4rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+p{
+    font-weight: bold;
+}
+
+h1{
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width:800px) and (min-width:310px){
+    .RegisterCard{
+        height:auto;
+        width:100%;
+        padding:0.5rem;
+        margin-top: 4rem;
+        margin-left: auto;
+    }
+    .inputs{
+        height:2rem;
+        width:auto;
+        padding:1rem 1.5rem;
+        margin:0.5rem;
+        font-size: 1rem;
+    }
+    .loginBtn{
+        height:2rem;
+        width:33vw;
+        margin:0.4rem;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+    .ResisterBtn{
+        height:2rem;
+        width:33vw;
+        margin:0.4rem;
+        font-size: 1rem;
+    }
+}

@@ -21,7 +21,7 @@ function IncomeItem({
             case 'salary':
                 return money;
             case 'freelancing':
-                return freelance
+                return freelance;
             case 'investments':
                 return stocks;
             case 'stocks':
@@ -75,7 +75,7 @@ function IncomeItem({
                     <div className="text">
                         <p>{dollar} {amount}</p>
                         <p>{calender} {dateFormat(date)}</p>
-                        <p>
+                        <p className='short_desc'>
                             {comment}
                             {description}
                         </p>
@@ -83,12 +83,11 @@ function IncomeItem({
                     <div className="btn-con">
                         <Button
                             icon={trash}
-                            bPad={'1rem'}
-                            bRad={'10%'}
-                            bg={'var(--primary-color'}
+                            bPad={'0.8rem'}
+                            bRad={'4%'}
+                            bg={'var(--color-green)'}
                             color={'#fff'}
                             iColor={'#fff'}
-                            hColor={'var(--color-green)'}
                             onClick={() => deleteItem(id)}
                         />
                     </div>
@@ -98,11 +97,11 @@ function IncomeItem({
     )
 }
 
+
+
+
 const IncomeItemStyled = styled.div`
     background: #FCF6F9;
-    border: 2px solid #FFFFFF;
-    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
-    border-radius: 10px;
     padding: 1rem;
     margin-bottom: 1rem;
     display: flex;
@@ -113,7 +112,7 @@ const IncomeItemStyled = styled.div`
     .icon{
         width: 80px;
         height: 80px;
-        border-radius: 20px;
+        border-radius:20px;
         background: #F5F5F5;
         display: flex;
         align-items: center;
@@ -124,11 +123,14 @@ const IncomeItemStyled = styled.div`
         }
     }
 
+    .short_desc{
+        visibility:visible;
+    }
     .content{
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: .2rem;
+        gap: .5rem;
         h5{
             font-size: 1.3rem;
             padding-left: 2rem;
@@ -142,7 +144,7 @@ const IncomeItemStyled = styled.div`
                 width: .8rem;
                 height: .8rem;
                 border-radius: 50%;
-                background: ${props => props.indicator};
+
             }
         }
 
@@ -153,7 +155,52 @@ const IncomeItemStyled = styled.div`
             .text{
                 display: flex;
                 align-items: center;
-                gap: 1.5rem;
+                gap: 2rem;
+                p{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    color: var(--primary-color);
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width:1200px) and (min-width:700px){
+        width:auto;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+
+        .icon{
+            width: auto;
+            height: auto;
+            border-radius:15px;
+            border: 2px solid #FFFFFF;
+            i{
+                font-size: 1.5rem;
+            }
+
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: .2rem;
+            h5{
+                font-size: 1rem;
+                padding-left: 2rem;
+                position: relative;
+
+            }
+        }
+        .inner-content{
+            .text{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
                 p{
                     display: flex;
                     align-items: center;
@@ -161,8 +208,76 @@ const IncomeItemStyled = styled.div`
                     color: var(--primary-color);
                     opacity: 0.8;
                 }
+                .short_desc{
+                    visibility:hidden;
+                    width:0;
+                    height:0;
+                }
             }
         }
+
+
+    }
+
+    @media only screen and (max-width:600px) and (min-width:310px){
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        width: auto;
+        .icon{
+            visibility:hidden;
+            width: 0;
+            height: 0;
+
+        }
+        .short_desc{
+            visibility:hidden;
+            width:0;
+            height:0;
+        }
+        .content{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: .2rem;
+            h5{
+                font-size: 0.8rem;
+                padding-left: 2rem;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: .8rem;
+                    height: .8rem;
+
+                }
+            }
+        }
+        .inner-content{
+            .text{
+                display: flex;
+                align-items: center;
+                gap: 0.3rem;
+                p{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.3rem;
+                    color: var(--primary-color);
+                    opacity: 0.8;
+                }
+                .short_desc{
+                    visibility:hidden;
+                    width:0;
+                    height:0;
+                }
+            }
+        }
+
     }
 `;
 

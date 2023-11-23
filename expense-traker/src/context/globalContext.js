@@ -5,7 +5,7 @@ import axios from 'axios'
 const BASE_URL = "http://localhost:5000/api/v1/";
 
 
-const GlobalContext = React.createContext()
+const GlobalContext = React.createContext();
 
 export const GlobalProvider = ({children}) => {
 
@@ -19,7 +19,7 @@ export const GlobalProvider = ({children}) => {
             .catch((err) =>{
                 setError(err.response.data.message)
             })
-        getIncomes()
+        getIncomes();
     }
 
     const getIncomes = async () => {

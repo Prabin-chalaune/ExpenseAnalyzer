@@ -70,11 +70,16 @@ function Chart() {
 
 const ChartStyled = styled.div`
     background: #FCF6F9;
-    border: 2px solid #FFFFFF;
-    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+    border-radius:2px;
     padding: 1rem;
-    border-radius: 10px;
     height: 100%;
+
+    @media only screen (max-width:500px) and (min-width:310px){
+        padding: 1rem;
+        height: auto;
+        width:auto;
+
+    }
 `;
 
-export default Chart
+export default Chart;
