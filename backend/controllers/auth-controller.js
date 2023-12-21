@@ -1,4 +1,6 @@
 // Controller in auth-controller.js
+
+const jwt = require('jsonwebtoken');
 const bcrypt=require('bcrypt')
 const User = require('../models/user'); // Import the User model
 
@@ -48,7 +50,6 @@ exports.Signup = async (req, res) => {
   }
 };
 
-
 exports.Login = async (req, res) => {
   const { email, password } = req.body;
 
@@ -62,7 +63,13 @@ exports.Login = async (req, res) => {
     const isPasswordValid = await bcrypt.compare(password, user.password);
 
     if (isPasswordValid) {
-      return res.status(200).json({ message: 'Login successful' });
+      const token = jwt.sign({ userId: user._id },process.env.SECRET_KEY, { expiresIn: '1h' });
+
+      // Store the token in the user schema or wherever needed for password reset
+      user.token = token;
+      await user.save();
+
+      return res.status(200).json({ message: 'Login successful', token });
     } else {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
@@ -71,6 +78,31 @@ exports.Login = async (req, res) => {
     return res.status(500).json({ message: 'Error logging in' });
   }
 };
+
+
+
+// exports.Login = async (req, res) => {
+//   const { email, password } = req.body;
+
+//   try {
+//     const user = await User.findOne({ email });
+
+//     if (!user) {
+//       return res.status(404).json({ message: 'User is not registered' });
+//     }
+
+//     const isPasswordValid = await bcrypt.compare(password, user.password);
+
+//     if (isPasswordValid) {
+//       return res.status(200).json({ message: 'Login successful' });
+//     } else {
+//       return res.status(401).json({ message: 'Invalid credentials' });
+//     }
+//   } catch (error) {
+//     console.error('Login error:', error);
+//     return res.status(500).json({ message: 'Error logging in' });
+//   }
+// };
 
 
 

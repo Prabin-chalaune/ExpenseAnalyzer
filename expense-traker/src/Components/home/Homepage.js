@@ -10,11 +10,11 @@ const Homepage = () => {
     <>
      <FormStyled>
         <div className='home_div'>
-         <h1>"Empower your financial journey. Track, Manage & Thrive"</h1>
+         <h1>Empower your financial journey. Track-Manage & Thrive</h1>
          <div className='mid_desc'>
-          <p><b>Gain an invaluable edge in managing your money</b> with our intuitive expense tracking platform. Seamlessly categorize and monitor your spending habits, effortlessly understanding where every dollar goes. Our user-friendly interface empowers you to set budgets, analyze trends, and make informed financial decisions. Take charge of your financial destiny as you chart a path toward smarter spending and long-term financial well-being. Join us today and witness how simple insights can transform the way you manage your expenses.</p>
+          <p><b>Gain an invaluable edge in managing your money</b> with our intuitive expenses managing platform. Seamlessly categorize and monitor your spending habits, effortlessly understanding where every money goes. Our user-friendly interface empowers you to set budgets, analyze trends, and make informed financial decisions. Take charge of your financial destiny as you chart a path toward smarter spending and long-term financial well-being. <b>Join us today </b>and witness how simple insights can transform the way you manage your expenses.</p>
          </div>
-         <Link to="/login"><button className='login_btn'>Continue</button></Link>
+         <Link to="/login"><button className='login_btn'>Explore Services</button></Link>
         </div>
      </FormStyled>
     </>
@@ -27,8 +27,6 @@ const FormStyled = styled.div`
 
   padding:2rem 8rem;
   margin-top:10%;
-
-
   .home_div{
     display:flex;
     flex-direction:column;
@@ -36,7 +34,7 @@ const FormStyled = styled.div`
     justify-content:center;
     align-items:center;
     h1{
-      margin-bottom:2rem;
+      margin-bottom:4rem;
     }
     .mid_desc{
       background-color: rgba(252, 246, 249, 0.78);
@@ -48,15 +46,15 @@ const FormStyled = styled.div`
       }
   }
     .login_btn{
-        height:2.5rem;
+        height:3rem;
         border:none;
         background-color:#42AD00;
         color:white;
-        width:10rem;
+        width:14rem;
         cursor:pointer;
         margin-top:2rem;
         font-size:1.2rem;
-        border-radius:5px;
+        border-radius:3px;
 
     }
   }

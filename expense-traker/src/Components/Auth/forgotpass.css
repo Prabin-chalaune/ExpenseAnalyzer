@@ -1,0 +1,84 @@
+.email_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18rem;
+}
+.pass_text{
+    font-size: 2.2rem;
+    padding-bottom: 2rem;
+
+}
+
+.forgot_email{
+    height: 2.5rem;
+    padding: 0.5rem;
+    width: 22rem;
+    margin-top:0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-size: 1rem;
+
+}
+.RequestBtn{
+    height:2.5rem;
+    width:21vw;
+    margin:0.4rem;
+    font-size: 1rem;
+    color:white;
+    background-color: black;
+    cursor: pointer;
+}
+.reset_{
+    text-decoration: none;
+    color:green;
+    padding-top:0.3rem;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.reset_:hover{
+    text-decoration: underline;
+    transition: 0.2s ease-in-out;
+
+}
+.email_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.message-box {
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.success-message {
+    background-color: #4caf50;
+    color: white;
+  }
+
+  .error-message {
+    background-color: #f44336;
+    color: white;
+  }
+  .cut{
+    background:transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color:white;
+    cursor: pointer;
+    padding-right: 0.5rem;
+  }

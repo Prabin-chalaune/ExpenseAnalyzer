@@ -21,7 +21,8 @@ function Navigation({active, setActive}) {
             <div className="user-con">
                 <img src={avatar} alt="" />
                 <div className="text">
-                    {userData?<h2>{userData}</h2> :"Daily"}
+                    {/* {userData?<h2>{userData}</h2> :"Daily"} */}
+                    <h2>Daily</h2>
                     <p>Money Record</p>
                 </div>
             </div>

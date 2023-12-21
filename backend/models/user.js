@@ -12,7 +12,16 @@ const userSchema=new mongoose.Schema({
     ,password:{
         type:String,
         required:true
+    },
+    token:{
+        type:String,
+        default:null
     }
+    // resetToken:{
+    //     type:String,
+    //     default:null
+    // }
+
 })
 
 

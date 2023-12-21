@@ -10,7 +10,6 @@
     text-align: center;
     margin-top: 10%;
     margin-left:30%;
-
 }
 
 .inputs{
@@ -62,6 +61,76 @@ h1{
     font-family: sans-serif;
     margin-bottom: 1.5rem;
 }
+
+.passwordContainer {
+    border: 1px solid black;
+    height: 2.6rem;
+    max-width: 20vw;
+    width: 100%;
+    margin-left: 0.6rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .inputWithIcon {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap:0;
+  }
+
+  .inputs_pass {
+    border: none;
+    height:2.5rem;
+    /* height: 100%; */
+    width: calc(100% - 3rem);
+    padding-left: 1rem;
+    border-radius: 0px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .passwordToggleBtn {
+    border: none;
+    cursor: pointer;
+    background-color: beige;
+    width: 3rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .forgotpass:hover{
+    font-size: 1rem;
+    color:green;
+  }
+
+/* .passwordContainer{
+    border:1px solid ;
+    height:2.6rem;
+    max-width:20vw;
+    width:100%;
+    margin-left: 0.6rem;
+    margin-bottom: 1rem;
+
+}
+.inputs_pass{
+    border:none;
+    height:2.5rem;
+    width:17vw;
+    padding-left: 1rem;
+    border-radius: 0px;
+    font-size: 1rem;
+}
+.passwordToggleBtn{
+    border: none;
+    cursor: pointer;
+    background-color:beige;
+    width:3rem;
+    height: 2.5rem;
+    overflow: hidden;
+} */
 
 
 @media only screen and (max-width:800px) and (min-width:310px){
