@@ -136,6 +136,7 @@ const ResetPassword=()=>{
           Reset Password
         </button>
       </form>
+
       {/* Message and error components */}
       {message && (
         <div className={`message-box success-message`}>

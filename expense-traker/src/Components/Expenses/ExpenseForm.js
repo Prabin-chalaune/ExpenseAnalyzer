@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 import { useGlobalContext } from '../../context/globalContext';
 import Button from '../Button/Button';
 import { plus } from '../../utils/Icons';
+import '../../App.css'
 
 
 function ExpenseForm() {
@@ -37,7 +37,8 @@ function ExpenseForm() {
     }
 
     return (
-        <ExpenseFormStyled onSubmit={handleSubmit}>
+        <>
+        <form className='ExpenseFormStyled' onSubmit={handleSubmit}>
             {error && <p className='error'>{error}</p>}
             <div className="input-control">
                 <input
@@ -93,51 +94,10 @@ function ExpenseForm() {
                     color={'#fff'}
                 />
             </div>
-        </ExpenseFormStyled>
+        </form>
+        </>
     )
 }
 
-
-const ExpenseFormStyled = styled.form`
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    input, textarea, select{
-        font-family: inherit;
-        font-size: inherit;
-        outline: none;
-        border: none;
-        padding: .5rem 1rem;
-        resize: none;
-        color: rgba(34, 34, 96, 0.9);
-        &::placeholder{
-            color: rgba(34, 34, 96, 0.4);
-        }
-    }
-    .input-control{
-        input{
-            width: 100%;
-        }
-    }
-
-    .selects{
-        display: flex;
-        justify-content: flex-end;
-        select{
-            color: rgba(34, 34, 96, 0.4);
-            &:focus, &:active{
-                color: rgba(34, 34, 96, 1);
-            }
-        }
-    }
-
-    .submit-btn{
-        button{
-
-                background: var(--color-green) !important;
-
-        }
-    }
-`;
 export default ExpenseForm;
 

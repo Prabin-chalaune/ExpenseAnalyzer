@@ -11,10 +11,6 @@ exports.ForgotPassword = async (req, res) => {
       return res.status(404).json({ message: 'User not found' });
     }
 
-    // Generate reset token
-    // const resetToken = crypto.randomBytes(20).toString('hex');
-    // user.resetToken = resetToken;
-    // await user.save();
     const token = jwt.sign({id: user._id}, "in3WuuW5L~8}?_03l?y|wBN$Dn[u*Ia<Bnw%KD", {expiresIn: "1d"})
 
     const resetUrl=`http://localhost:3000/forgotpass/resetpass/${user._id}/${token}`
@@ -24,8 +20,8 @@ exports.ForgotPassword = async (req, res) => {
         port: 465,
         secure: true,
         auth: {
-          // user:'prabinchalaune@gmail.com',
-          // pass:'20590716&Kumar'
+          // user:'praamsdknasnqe@gmail.com',
+          // pass:'2aslkdkqlk'
             user: process.env.GMAIL_USERNAME,
             pass: process.env.GENERATED_PASSWORD
         }

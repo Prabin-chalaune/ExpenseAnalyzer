@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import '../App.css'
 import { useGlobalContext } from '../context/globalContext';
 
 
@@ -8,7 +8,7 @@ function History() {
 
     const [...history] = transactionHistory();
     return (
-        <HistoryStyled>
+        <div className='HistoryStyled'>
             <h2>Recent History</h2>
             {history.map((item) =>{
                 const {_id, title, amount, type} = item
@@ -30,21 +30,10 @@ function History() {
                     </div>
                 )
             })}
-        </HistoryStyled>
+        </div>
     )
 }
 
-const HistoryStyled = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    .history-item{
-        background: #FCF6F9;
-        padding: 1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-`;
+
 
 export default History;

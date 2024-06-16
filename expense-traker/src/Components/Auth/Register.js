@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import './register.css';
-import axios from 'axios';      // for api call
+import axios from 'axios';
 import {useNavigate} from "react-router-dom";
 import { Link } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ const Register = () => {
   });
   const navigate= useNavigate();
 
-  const [user,setUser]=useState({   //user creating  :initial value null of these objects
+  const [user,setUser]=useState({
     name:"",
     email:"",
     password:"",
@@ -70,7 +70,7 @@ const Register = () => {
   };
 
 const resisterClick = (e) => {
-  e.preventDefault(); // Prevents the default form submission behavior
+  e.preventDefault();
 
   const { name, email, password, ConfirmPassword } = user;
 
@@ -87,7 +87,7 @@ const resisterClick = (e) => {
           console.error("Server responded with status:", error.response.status);
           console.error("Server response data:", error.response.data);
         } else if (error.request) {
-          // The request was made but no response was received
+
           console.error("No response received:", error.request);
         } else {
           console.error("Error setting up the request:", error.message);

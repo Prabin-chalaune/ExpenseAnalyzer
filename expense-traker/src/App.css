@@ -1,0 +1,1183 @@
+/*----homepage----*/
+.FormStyled{
+  padding:2rem 8rem;
+  margin-top:10%;
+}
+.home_div{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+
+}
+.home_div h1{
+    margin-bottom: 4rem;
+}
+.mid_desc{
+      background-color: rgba(252, 246, 249, 0.78);
+  }
+.mid_desc p{
+    padding:4rem 1.5rem;
+    font-size:1.2rem;
+    font-weight:500;
+    letter-spacing:0.03rem;
+
+}
+
+.login_btn{
+    height:3rem;
+    border:none;
+    background-color:#42AD00;
+    color:white;
+    width:14rem;
+    cursor:pointer;
+    margin-top:2rem;
+    font-size:1.2rem;
+    border-radius:3px;
+
+}
+
+@media only screen and (max-width:600px) and (min-width:310px){
+  .FormStyled{
+    padding:1rem 1rem;
+    margin-top:5%;
+    }
+
+  .home_div h1{
+        font-size:1rem;
+    }
+   .home_div p{
+        padding:0.5rem;
+        font-size:0.8rem;
+        text-align:left;
+    }
+    .login_btn{
+        width:10rem;
+        cursor:pointer;
+        margin-top:1rem;
+        font-size:1rem;
+    }
+  }
+
+
+  /*-----------layout--------------*/
+.InnerLayout{
+    padding: 2rem 2rem;
+    width: 100%;
+    height:100%;
+  }
+
+@media only screen and (max-width:1024px) and (min-width:750px){
+    .InnerLayout{
+        padding: 1rem 1rem;
+        width: auto;
+    }
+
+}
+@media only screen and (max-width:500px) and (min-width:310px){
+    .InnerLayout{
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+        width: 100%;
+        height:auto;
+        overflow-y:auto;
+    }
+
+}
+
+.MainLayout{
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    gap: 2rem;
+}
+
+@media only screen and (max-width:500px) and (min-width:310px){
+    .MainLayout{
+        padding: 0.5rem;
+        height: auto;
+        display: flex;
+        flex-direction:column;
+        gap: 1rem;
+        overflow-y:auto;
+    }
+}
+
+/*------------dashboard style-----------*/
+ .DashboardStyled{
+    height:auto;
+    overflow-y:auto;
+ }
+
+ .DashboardStyled h1{
+       padding-bottom:1rem;
+    }
+
+    .stats-con {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
+    }
+
+    .stats-con .chart-con {
+        grid-column: 1 / 4;
+        height: 400px;
+    }
+
+    .stats-con .chart-con .amount-con {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .stats-con .chart-con .amount-con .income,
+    .stats-con .chart-con .amount-con .expense {
+        grid-column: span 2;
+    }
+
+    .stats-con .chart-con .amount-con .income,
+    .stats-con .chart-con .amount-con .expense,
+    .stats-con .chart-con .amount-con .balance {
+        background: #FCF6F9;
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+        padding: 1rem;
+    }
+
+    .stats-con .chart-con .amount-con .income p,
+    .stats-con .chart-con .amount-con .expense p,
+    .stats-con .chart-con .amount-con .balance p {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .stats-con .chart-con .amount-con .balance {
+        grid-column: 2 / 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+
+    .stats-con .chart-con .amount-con .balance p {
+        color: var(--color-green);
+        opacity: 0.6;
+        font-size: 2rem;
+    }
+
+    .stats-con .history-con {
+        grid-column: 4 / -1;
+    }
+
+    .stats-con .history-con h2 {
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .stats-con .history-con .salary-title {
+        font-size: 1.2rem;
+    }
+
+    .stats-con .history-con .salary-title span {
+        font-size: 1.8rem;
+    }
+
+    .stats-con .history-con .salary-item {
+        background: #FCF6F9;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .stats-con .history-con .salary-item p {
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+
+
+
+   @media only screen and (max-width:1024px) and (min-width:500px){
+       .DashboardStyled h1{
+           font-size:1rem;
+       }
+       .stats-con {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .stats-con .chart-con {
+            height: auto;
+            width: auto;
+        }
+
+        .stats-con .chart-con .amount-con {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .stats-con .chart-con .amount-con .income,
+        .stats-con .chart-con .amount-con .expense,
+        .stats-con .chart-con .amount-con .balance {
+            background: #FCF6F9;
+            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+            padding: 0.7rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .stats-con .chart-con .amount-con .income p,
+        .stats-con .chart-con .amount-con .expense p,
+        .stats-con .chart-con .amount-con .balance p {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .stats-con .chart-con .amount-con .balance {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: left;
+        }
+
+        .stats-con .chart-con .amount-con .balance p {
+            color: var(--color-green);
+            opacity: 0.6;
+            font-size: 1rem;
+        }
+
+        .stats-con .history-con {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stats-con .history-con h2 {
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .stats-con .history-con .salary-title {
+            font-size: 1rem;
+        }
+
+        .stats-con .history-con .salary-title span {
+            font-size: 1.2rem;
+        }
+
+        .stats-con .history-con .salary-item {
+            background: #FCF6F9;
+            padding: 0.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stats-con .history-con .salary-item p {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+   }
+
+
+@media only screen and (max-width:500px) and (min-width:310px){
+    .DashboardStyled h1{
+       font-size:1.2rem;
+    }
+   .DashboardStyledh2{
+       font-size:1rem;
+   }
+   .stats-con {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   }
+
+    .stats-con .chart-con {
+        height: auto;
+        width: auto;
+    }
+
+    .stats-con .chart-con .amount-con {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .stats-con .chart-con .amount-con .income,
+    .stats-con .chart-con .amount-con .expense,
+    .stats-con .chart-con .amount-con .balance {
+        background: #FCF6F9;
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .stats-con .chart-con .amount-con .income p,
+    .stats-con .chart-con .amount-con .expense p,
+    .stats-con .chart-con .amount-con .balance p {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .stats-con .chart-con .amount-con .balance {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: left;
+    }
+
+    .stats-con .chart-con .amount-con .balance p {
+        color: var(--color-green);
+        opacity: 0.6;
+        font-size: 0.8rem;
+    }
+
+    .stats-con .history-con {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stats-con .history-con h2 {
+        margin: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .stats-con .history-con .salary-title {
+        font-size: 0.8rem;
+    }
+
+    .stats-con .history-con .salary-title span {
+        font-size: 1rem;
+    }
+
+    .stats-con .history-con .salary-item {
+        background: #FCF6F9;
+        padding: 0.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .stats-con .history-con .salary-item p {
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+   }
+
+.CustomScrollableContainer {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+    /* Webkit (Chrome, Safari) */
+.CustomScrollableContainer::-webkit-scrollbar {
+      width: 10px;
+    }
+
+.CustomScrollableContainer::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+.CustomScrollableContainer::-webkit-scrollbar-thumb {
+      background-color: transparent;
+      border-radius: 10px;
+    }
+
+
+
+
+
+
+/*------------app styled-------------*/
+.AppStyled{
+    height: 100vh;
+    /* background-image: url(${props => props.bg}); */
+    position: relative;
+}
+
+.AppStyled main {
+    flex: 1;
+}
+
+.AppStyled main::-webkit-scrollbar {
+    width: 0;
+}
+
+@media only screen and (max-width:500px) and (min-width:310px){
+
+   .AppStyled{
+        height:100%;
+        overflow-y:auto;
+        display:flex;
+        flex-direction:column;
+        gap:1rem;
+   }
+   .AppStyled main{
+      flex-direction:column;
+      width:100%;
+      height:auto;
+      overflow-y: auto;
+
+    }
+  }
+
+/*-------------setting layer----------*/
+.settingLayer{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   top:50%;
+   left:50%;
+   font-size:2rem;
+}
+
+/*----------------navigation layer-------------*/
+
+.NavStyled{
+    padding: 2rem 1.5rem;
+    width: 374px;
+    height: 100%;
+    background: rgba(252, 246, 249, 0.78);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.user-con {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-con img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fcf6f9;
+    border: 2px solid #FFFFFF;
+    padding: .2rem;
+    box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.06);
+}
+
+.user-con h2 {
+    color: rgba(34, 34, 96, 1);
+    font-size: 1.5rem;
+}
+
+.user-con p {
+    color: rgba(34, 34, 96, .6);
+}
+
+.menu-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-items li {
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+    margin: .6rem 0;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    color: rgba(34, 34, 96, .6);
+    padding-left: 1rem;
+    position: relative;
+}
+
+.menu-items li i {
+    color: rgba(34, 34, 96, 0.6);
+    font-size: 1.4rem;
+    transition: all .4s ease-in-out;
+}
+
+.logout {
+    border: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.active {
+    color: rgba(34, 34, 96, 1) !important;
+}
+
+.active i {
+    color: rgba(34, 34, 96, 1) !important;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #222260;
+    border-radius: 0 10px 10px 0;
+}
+
+   @media only screen and (max-width: 1024px) and (min-width: 700px)  {
+      .NavStyled{
+        padding: 2rem 1.5rem;
+        width: 260px;
+      }
+    }
+    @media only screen and (max-width:500px) and (min-width:310px){
+        .NavStyled{
+            padding: 0.5rem 0.5rem;
+            width: 100%;
+            height:auto;
+            background: rgba(252, 246, 249, 0.78);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 0.4rem;
+            font-size:0.8rem;
+        }
+        .user-con {
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .user-con img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .user-con h2 {
+            font-size: 1rem;
+        }
+
+        .user-con p {
+            font-size: 0.8rem;
+        }
+
+        .logout {
+            font-size: 0.8rem;
+        }
+
+        .menu-items {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-items li {
+            display: grid;
+            grid-template-columns: 40px auto;
+            align-items: center;
+            margin: 0.6rem 0;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            color: rgba(34, 34, 96, 0.6);
+            padding-left: 0.5rem;
+            position: relative;
+        }
+
+        .menu-items li i {
+            color: rgba(34, 34, 96, 0.6);
+            font-size: 0.8rem;
+            transition: all 0.4s ease-in-out;
+        }
+
+
+    }
+
+    /*------------incomeitem----------*/
+    .IncomeItemStyled{
+        background: #FCF6F9;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        color: #222260;
+    }
+    .icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        background: #F5F5F5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #FFFFFF;
+    }
+
+    .icon i {
+        font-size: 2.6rem;
+    }
+
+    .short_desc {
+        visibility: visible;
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .content h5 {
+        font-size: 1.3rem;
+        padding-left: 2rem;
+        position: relative;
+    }
+
+    .content h5::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+    }
+
+    .inner-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .inner-content .text {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .inner-content .text p {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: var(--primary-color);
+        opacity: 0.8;
+    }
+    @media only screen and (max-width:1200px) and (min-width:700px){
+     .IncomeItemStyled{
+        width:auto;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .icon {
+        width: auto;
+        height: auto;
+        border-radius: 15px;
+        border: 2px solid #FFFFFF;
+    }
+
+    .icon i {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .content h5 {
+        font-size: 1rem;
+        padding-left: 2rem;
+        position: relative;
+    }
+
+    .inner-content .text {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .inner-content .text p {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--primary-color);
+        opacity: 0.8;
+    }
+
+    .inner-content .text .short_desc {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+@media only screen and (max-width:600px) and (min-width:310px){
+    .IncomeItemStyled{
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        width: auto;
+    }
+    .icon{
+        visibility:hidden;
+        width: 0;
+        height: 0;
+
+    }
+    .short_desc{
+        visibility:hidden;
+        width:0;
+        height:0;
+    }
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .content h5 {
+        font-size: 0.8rem;
+        padding-left: 2rem;
+        position: relative;
+    }
+
+    .content h5::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+
+    .inner-content .text {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .inner-content .text p {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        color: var(--primary-color);
+        opacity: 0.8;
+    }
+
+    .inner-content .text .short_desc {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+
+/*------------------incomestyle---------------*/
+.IncomeStyled{
+    display: flex;
+
+}
+.total-income {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FCF6F9;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    gap: 0.5rem;
+}
+
+.total-income span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-green);
+}
+
+.income-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.income-content .incomes {
+    flex: 1;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 700px) {
+    .IncomeStyled{
+        height:auto;
+        overflow-y:auto;
+        width:auto;
+    }
+    .total-income {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.7rem;
+        margin: 0.7rem 0;
+        font-size: 1.2rem;
+        width: auto;
+        gap: 0.5rem;
+    }
+
+    .total-income span {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--color-green);
+    }
+
+    .income-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .income-content .incomes {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media only screen and (max-width: 600px) and (min-width: 310px) {
+    .total-income {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        font-size: 0.8rem;
+        width: auto;
+        gap: 0.5rem;
+    }
+
+    .total-income span {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--color-green);
+    }
+
+    .income-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .income-content .incomes {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.CustomScrollable {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.CustomScrollable::-webkit-scrollbar {
+    width: 10px;
+}
+
+.CustomScrollable::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.CustomScrollable::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.CustomScrollable {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+
+/*----------------form-----------------*/
+.FormStyled {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.FormStyled input,
+.FormStyled textarea,
+.FormStyled select {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5rem 1rem;
+    resize: none;
+    color: rgba(34, 34, 96, 0.9);
+    border-color: rgba(34, 34, 96, 0.9);
+}
+
+.FormStyled input::placeholder,
+.FormStyled textarea::placeholder,
+.FormStyled select::placeholder {
+    color: rgba(34, 34, 96, 0.4);
+}
+
+.FormStyled .input-control input {
+    width: 100%;
+}
+
+.FormStyled .selects {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.FormStyled .selects select {
+    color: rgba(34, 34, 96, 0.4);
+    border-color: rgba(34, 34, 96, 0.9);
+}
+
+.FormStyled .selects select:focus,
+.FormStyled .selects select:active {
+    border-color: rgba(34, 34, 96, 0.9);
+    color: rgba(34, 34, 96, 1);
+}
+
+/* .FormStyled .submit-btn button {
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+} */
+
+.FormStyled .submit-btn button:hover {
+    background: var(--color-green);
+}
+
+
+/*---------expenseForm------------------*/
+.ExpenseFormStyled {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ExpenseFormStyled input,
+.ExpenseFormStyled textarea,
+.ExpenseFormStyled select {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5rem 1rem;
+    resize: none;
+    border-color: rgba(34, 34, 96, 0.9);
+    color: rgba(34, 34, 96, 0.9);
+}
+
+.ExpenseFormStyled input::placeholder,
+.ExpenseFormStyled textarea::placeholder,
+.ExpenseFormStyled select::placeholder {
+    color: rgba(34, 34, 96, 0.4);
+}
+
+.ExpenseFormStyled .input-control input {
+    width: 100%;
+}
+
+.ExpenseFormStyled .selects {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ExpenseFormStyled .selects select {
+    border-color:rgba(34, 34, 96, 0.4) ;
+    color: rgba(34, 34, 96, 0.4);
+}
+
+.ExpenseFormStyled .selects select:focus,
+.ExpenseFormStyled .selects select:active {
+    border-color:rgba(34, 34, 96, 0.4) ;
+    color: rgba(34, 34, 96, 1);
+}
+
+.ExpenseFormStyled .submit-btn button {
+    background: var(--color-green);
+    border:none;
+    outline: none;
+}
+
+
+/*----------------expenses--------------------*/
+.ExpenseStyled {
+    display: flex;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.ExpenseStyled .total-income {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FCF6F9;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    gap: 0.5rem;
+}
+
+.ExpenseStyled .total-income span {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-green);
+}
+
+.ExpenseStyled .income-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.ExpenseStyled .income-content .incomes {
+    flex: 1;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 700px) {
+    .ExpenseStyled {
+        display: flex;
+    }
+
+    .ExpenseStyled .total-income {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-size: 1rem;
+        gap: 0.5rem;
+    }
+
+    .ExpenseStyled .total-income span {
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--color-green);
+    }
+
+    .ExpenseStyled .income-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ExpenseStyled .income-content .incomes {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 310px) {
+    .ExpenseStyled {
+        display: flex;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .ExpenseStyled .total-income {
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        font-size: 0.8rem;
+        gap: 0.5rem;
+    }
+
+    .ExpenseStyled .total-income span {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--color-green);
+    }
+
+    .ExpenseStyled .income-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .ExpenseStyled .income-content .incomes {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.CustomScroll {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.CustomScroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+/*--------------chart----------------*/
+.ChartStyled {
+    background: #FCF6F9;
+    border-radius: 2px;
+    padding: 1rem;
+    height: 100%;
+}
+
+@media only screen and (max-width: 500px) and (min-width: 310px) {
+    .ChartStyled {
+        padding: 1rem;
+        height: auto;
+        width: auto;
+    }
+}
+
+/*--------------buttonStyled---------------*/
+.ButtonStyled{
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+
+}
+
+
+/*--------------historystyle----------------*/
+.HistoryStyled{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.history-item{
+        background: #FCF6F9;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }

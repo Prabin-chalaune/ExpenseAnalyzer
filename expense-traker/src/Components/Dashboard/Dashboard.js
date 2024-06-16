@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { useGlobalContext } from '../../context/globalContext';
 import History from '../../History/History';
-import { InnerLayout } from '../../styles/Layouts';
 import { dollar } from '../../utils/Icons';
 import Chart from '../Chart/Chart';
+import '../../App.css'
 
 function Dashboard() {
     const {totalExpenses,incomes, expenses, totalIncome, totalBalance, getIncomes, getExpenses } = useGlobalContext()
@@ -17,9 +17,9 @@ function Dashboard() {
 
 
     return (
-        <DashboardStyled>
-            <InnerLayout>
-                < CustomScrollableContainer>
+        <div className='DashboardStyled'>
+            <div className='InnerLayout'>
+                <div className='CustomScrollableContainer'>
                     <h1>Transactions History</h1>
                     <div className="stats-con">
                         <div className="chart-con">
@@ -67,274 +67,10 @@ function Dashboard() {
                             </div>
                         </div>
                     </div>
-                </CustomScrollableContainer>
-            </InnerLayout>
-        </DashboardStyled>
+                </div>
+            </div>
+        </div>
     )
 }
-
-
-
-const DashboardStyled = styled.div`
-     height:auto;
-     overflow-y:auto;
-     h1{
-        padding-bottom:1rem;
-     }
-    .stats-con{
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 2rem;
-        .chart-con{
-            grid-column: 1 / 4;
-            height: 400px;
-            .amount-con{
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 2rem;
-                margin-top: 2rem;
-                .income, .expense{
-                    grid-column: span 2;
-                }
-                .income, .expense, .balance{
-                    background: #FCF6F9;
-                    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
-                    padding: 1rem;
-                    p{
-                        font-size: 2rem;
-                        font-weight: 600;
-                    }
-                }
-
-                .balance{
-                    grid-column: 2 / 4;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items:left;
-                    p{
-                        color: var(--color-green);
-                        opacity: 0.6;
-                        font-size: 2rem;
-                    }
-                }
-            }
-        }
-
-        .history-con{
-            grid-column: 4 / -1;
-            h2{
-                margin: 1rem 0;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-            .salary-title{
-                font-size: 1.2rem;
-                span{
-                    font-size: 1.8rem;
-                }
-            }
-            .salary-item{
-                background: #FCF6F9;
-                padding: 1rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                p{
-                    font-weight: 600;
-                    font-size: 1.6rem;
-                }
-            }
-        }
-    }
-
-    @media only screen and (max-width:1024px) and (min-width:500px){
-        h1{
-            font-size:1rem;
-        }
-        .stats-con{
-            display:flex;
-            flex-direction:column;
-            gap: 1.5rem;
-
-            .chart-con{
-
-                height:auto;
-                width:auto;
-                .amount-con{
-                    display:flex;
-                   flex-direction:column;
-                    gap: 1.5rem;
-                    margin-top: 1rem;
-
-                    .income, .expense, .balance{
-                        background: #FCF6F9;
-                        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
-                        padding: 0.7rem;
-                        display:flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-
-                        p{
-                            font-size: 1rem;
-                            font-weight: 600;
-                        }
-                    }
-
-                    .balance{
-
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        align-items: left;
-                        p{
-                            color: var(--color-green);
-                            opacity: 0.6;
-                            font-size: 1rem;
-                        }
-                    }
-                }
-            }
-
-            .history-con{
-               display:flex;
-               flex-direction:column;
-                h2{
-                    margin: 1rem 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                }
-                .salary-title{
-                    font-size: 1rem;
-                    span{
-                        font-size: 1.2rem;
-                    }
-                }
-                .salary-item{
-                    background: #FCF6F9;
-                    padding: 0.6rem;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    p{
-                        font-weight: 600;
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-        }
-
-
-    }
-    @media only screen and (max-width:500px) and (min-width:310px){
-     h1{
-        font-size:1.2rem;
-    }
-    h2{
-        font-size:1rem;
-    }
-    .stats-con{
-        display:flex;
-        flex-direction:column;
-        gap: 1rem;
-        .chart-con{
-
-            height:auto;
-            width:auto;
-            .amount-con{
-                display:flex;
-               flex-direction:column;
-                gap: 1rem;
-                margin-top: 1rem;
-
-                .income, .expense, .balance{
-                    background: #FCF6F9;
-                    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
-                    padding: 0.5rem;
-                    display:flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-
-                    p{
-                        font-size: 0.8rem;
-                        font-weight: 600;
-                    }
-                }
-
-                .balance{
-
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: left;
-                    p{
-                        color: var(--color-green);
-                        opacity: 0.6;
-                        font-size: 0.8rem;
-                    }
-                }
-            }
-        }
-
-        .history-con{
-           display:flex;
-           flex-direction:column;
-
-            h2{
-                margin: 0.5rem 0;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-            .salary-title{
-                font-size: 0.8rem;
-                span{
-                    font-size: 1rem;
-                }
-            }
-            .salary-item{
-                background: #FCF6F9;
-                padding: 0.6rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                p{
-                    font-weight: 600;
-                    font-size: 0.8rem;
-                }
-            }
-        }
-    }
-
-
-    }
-`;
-
-const CustomScrollableContainer = styled.div`
-  max-height: calc(100vh - 200px);
-  overflow-y: auto;
-
-  /* Webkit (Chrome, Safari) */
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: transparent;
-    border-radius: 10px;
-  }
-
-  /* Firefox */
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
-
-`;
-
 
 export default Dashboard

@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-//https://github.com/alokyadav1/mern-todo-app
-
 const Forgotpass = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");

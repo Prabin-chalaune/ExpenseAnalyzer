@@ -27,7 +27,7 @@ const Login = ({ setLoginUser }) => {
   const togglePasswordVisibility = () => {
     setUser({
       ...user,
-      showPassword: !user.showPassword, // Toggle password visibility
+      showPassword: !user.showPassword,     // Toggle password visibility
     });
   };
 

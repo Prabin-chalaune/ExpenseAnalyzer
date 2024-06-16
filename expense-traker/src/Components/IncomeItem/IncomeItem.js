@@ -1,8 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
 import { dateFormat } from '../../utils/dateFormat';
 import { bitcoin, book, calender, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../../utils/Icons';
 import Button from '../Button/Button';
+import '../../App.css'
 
 function IncomeItem({
     id,
@@ -65,7 +65,7 @@ function IncomeItem({
     console.log('type', type)
 
     return (
-        <IncomeItemStyled indicator={indicatorColor}>
+        <div className='IncomeItemStyled' indicator={indicatorColor}>
             <div className="icon">
                 {type === 'expense' ? expenseCatIcon() : categoryIcon()}
             </div>
@@ -93,192 +93,8 @@ function IncomeItem({
                     </div>
                 </div>
             </div>
-        </IncomeItemStyled>
+        </div>
     )
 }
-
-
-
-
-const IncomeItemStyled = styled.div`
-    background: #FCF6F9;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    color: #222260;
-    .icon{
-        width: 80px;
-        height: 80px;
-        border-radius:20px;
-        background: #F5F5F5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid #FFFFFF;
-        i{
-            font-size: 2.6rem;
-        }
-    }
-
-    .short_desc{
-        visibility:visible;
-    }
-    .content{
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-        h5{
-            font-size: 1.3rem;
-            padding-left: 2rem;
-            position: relative;
-            &::before{
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                width: .8rem;
-                height: .8rem;
-                border-radius: 50%;
-
-            }
-        }
-
-        .inner-content{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .text{
-                display: flex;
-                align-items: center;
-                gap: 2rem;
-                p{
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
-                    color: var(--primary-color);
-                    opacity: 0.8;
-                }
-            }
-        }
-    }
-
-    @media only screen and (max-width:1200px) and (min-width:700px){
-        width:auto;
-        padding: 0.5rem;
-        margin-bottom: 0.5rem;
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-
-        .icon{
-            width: auto;
-            height: auto;
-            border-radius:15px;
-            border: 2px solid #FFFFFF;
-            i{
-                font-size: 1.5rem;
-            }
-
-        }
-        .content{
-            display: flex;
-            flex-direction: column;
-            gap: .2rem;
-            h5{
-                font-size: 1rem;
-                padding-left: 2rem;
-                position: relative;
-
-            }
-        }
-        .inner-content{
-            .text{
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                p{
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                    color: var(--primary-color);
-                    opacity: 0.8;
-                }
-                .short_desc{
-                    visibility:hidden;
-                    width:0;
-                    height:0;
-                }
-            }
-        }
-
-
-    }
-
-    @media only screen and (max-width:600px) and (min-width:310px){
-        padding: 0.5rem;
-        margin-bottom: 0.5rem;
-        display: flex;
-        align-items: center;
-        gap: 0.3rem;
-        width: auto;
-        .icon{
-            visibility:hidden;
-            width: 0;
-            height: 0;
-
-        }
-        .short_desc{
-            visibility:hidden;
-            width:0;
-            height:0;
-        }
-        .content{
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: .2rem;
-            h5{
-                font-size: 0.8rem;
-                padding-left: 2rem;
-                position: relative;
-                &::before{
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: .8rem;
-                    height: .8rem;
-
-                }
-            }
-        }
-        .inner-content{
-            .text{
-                display: flex;
-                align-items: center;
-                gap: 0.3rem;
-                p{
-                    display: flex;
-                    align-items: center;
-                    gap: 0.3rem;
-                    color: var(--primary-color);
-                    opacity: 0.8;
-                }
-                .short_desc{
-                    visibility:hidden;
-                    width:0;
-                    height:0;
-                }
-            }
-        }
-
-    }
-`;
 
 export default IncomeItem

@@ -9,9 +9,9 @@ import {Chart as ChartJs,
     Legend,
     ArcElement,
 } from 'chart.js'
+import '../../App.css'
 
 import {Line} from 'react-chartjs-2'
-import styled from 'styled-components'
 import { useGlobalContext } from '../../context/globalContext'
 import { dateFormat } from '../../utils/dateFormat'
 
@@ -62,24 +62,10 @@ function Chart() {
 
 
     return (
-        <ChartStyled >
+        <div className='ChartStyled' >
             <Line data={data} />
-        </ChartStyled>
+        </div>
     )
 }
-
-const ChartStyled = styled.div`
-    background: #FCF6F9;
-    border-radius:2px;
-    padding: 1rem;
-    height: 100%;
-
-    @media only screen (max-width:500px) and (min-width:310px){
-        padding: 1rem;
-        height: auto;
-        width:auto;
-
-    }
-`;
 
 export default Chart;

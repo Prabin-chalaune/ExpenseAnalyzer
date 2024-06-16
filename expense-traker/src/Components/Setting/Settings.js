@@ -1,25 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
+import '../../App.css'
 
 const Settings = () => {
   return (
-    <settingLayer>
+    <div className='settingLayer'>
 
          <h2> Page Not Found</h2>
 
-    </settingLayer>
+    </div>
   );
 }
 
 export default Settings;
 
 
-const settingLayer = styled.div`
-   display:flex;
-   align-items:center;
-   justify-content:center;
-   top:50%;
-   left:50%;
-   font-size:2rem;
 
-`;
